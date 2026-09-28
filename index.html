@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EduGenie - Google Gemini powered learning assistant">
+  <title>EduGenie | AI Learning Assistant</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="logo">E</div>
+      <div>
+        <h1>Welcome to EduGenie ✨</h1>
+        <p>Your personal AI tutor for learning support.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="pill">Google Gemini Powered</span>
+      <h2>Learn faster with one simple workspace.</h2>
+      <p>Ask questions, understand difficult topics, summarize notes, practice with quizzes, and build a learning path.</p>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <div class="icon">💬</div>
+        <h3>Ask EduGenie a Question</h3>
+        <form id="qaForm">
+          <label for="question">Question</label>
+          <input id="question" type="text" maxlength="4000" placeholder="Why is the sky blue?" required>
+          <button type="submit">Get Answer</button>
+        </form>
+        <div id="qaResult" class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="card">
+        <div class="icon">💡</div>
+        <h3>Need an Explanation?</h3>
+        <form id="explainForm">
+          <label for="topic">Topic</label>
+          <input id="topic" type="text" maxlength="1000" placeholder="Photosynthesis" required>
+          <button type="submit">Explain</button>
+        </form>
+        <div id="explanationResult" class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="card card-wide">
+        <div class="icon">📝</div>
+        <h3>Summarize a Paragraph</h3>
+        <form id="summaryForm">
+          <label for="summaryText">Study text</label>
+          <textarea id="summaryText" maxlength="30000" placeholder="Paste your study notes here..." required></textarea>
+          <button type="submit">Summarize</button>
+        </form>
+        <div id="summaryResult" class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="card card-wide">
+        <div class="icon">🧠</div>
+        <h3>Generate a Quiz</h3>
+        <form id="quizForm">
+          <label for="quizText">Study material</label>
+          <textarea id="quizText" maxlength="15000" placeholder="Paste content such as a lesson or notes..." required></textarea>
+
+          <div class="quiz-controls">
+            <div>
+              <label for="questionCount">Number of questions</label>
+              <select id="questionCount">
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <button type="submit">Generate Quiz</button>
+          </div>
+        </form>
+        <div id="quizResult" class="result result-wide" aria-live="polite"></div>
+      </article>
+
+      <article class="card card-wide">
+        <div class="icon">🗺️</div>
+        <h3>Get Learning Recommendations</h3>
+        <form id="learnForm">
+          <label for="learnTopic">Topic</label>
+          <input id="learnTopic" type="text" maxlength="500" placeholder="SQL" required>
+          <button type="submit">Build Learning Path</button>
+        </form>
+        <div id="learnResult" class="result result-wide" aria-live="polite"></div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>EduGenie • FastAPI + Google Gemini</span>
+    <span id="healthStatus">Checking backend...</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+[
+  "tests/test_api.py::test_explain",
+  "tests/test_api.py::test_health",
+  "tests/test_api.py::test_learning_recommendations",
+  "tests/test_api.py::test_qna",
+  "tests/test_api.py::test_quiz",
+  "tests/test_api.py::test_summary"
+]
